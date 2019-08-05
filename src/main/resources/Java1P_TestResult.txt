@@ -1,0 +1,24 @@
+# Advanced Class Design
+
+1. A
+2. A
+3. C
+4. D
+5. B, D
+6. B
+7. E
+8. C
+9.
+10. C
+11. D
+12. E
+13. B
+14. E, F /E
+15. C /B,E
+16. E
+17. C /B,C
+18. E, D, F, E /G
+19. A, C
+20. E /C
+21. A, C, E
+
