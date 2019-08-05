@@ -1,0 +1,54 @@
+/.project
+/.settings
+hpp-web/.classpath
+hpp-web/.project
+hpp-web/.settings
+hpp-web/.springBeans
+hpp-web/.profiler/
+hpp-web/target
+hpp-web/derby.log
+hpp-web/package-lock.json
+hpp-web/node
+hpp-web/node_modules
+hpp-swagger/.classpath
+hpp-swagger/.project
+hpp-swagger/.settings
+target/
+*/*.versionsBackup
+*.versionsBackup
+/bin/
+hpp-rpm/.project
+*.iml
+.idea
+*.orig
+.metadata/
+RemoteSystemsTempFiles/
+Servers/
+/screenshots/
+/test-output/
+docker/hpp-web-*.war
+docker/server.xml
+/META-INF/
+*.class
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# exclude jar for gradle wrapper
+!gradle/wrapper/*.jar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# build files
+**/target
+target
+.gradle
+build
+**/output
+**/ target
+
