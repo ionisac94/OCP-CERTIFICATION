@@ -1,6 +1,6 @@
 package com.md.endava.ocp.generics_and_collections.sort;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -11,21 +11,26 @@ public class Catzel implements Comparable<Catzel> {
 
 		Catzel JACK = new Catzel("CJack", "maro", 2);//377
 		Catzel PIKA = new Catzel("Pika", "negru", 2);//389
-		Catzel SARIC = new Catzel("ASarictrrre", "castaniu", 3);//499
+		Catzel SARIC = new Catzel("AS", "castaniu", 3);//499
 		Catzel BINGO = new Catzel("Bingo", "Alb", 4);//495
+		Catzel BINGO2 = new Catzel("Bingo", "Alb", 5);//495
 
-		System.out.println(JACK.equals(SARIC));
+		List<Catzel> catzelList = new ArrayList<>();
+		catzelList.add(JACK);
+		catzelList.add(PIKA);
+		catzelList.add(SARIC);
+		catzelList.add(BINGO);
+		catzelList.add(BINGO2);
+		System.out.println(BINGO.equals(BINGO2));
+		System.out.println(BINGO.compareTo(BINGO2));
 
-		System.out.println(JACK.hashCode());
-		System.out.println(PIKA.hashCode());
+		catzelList.forEach(System.out::println);
 
-		System.out.println("/////////////////////////////////////////");
+		Collections.sort(catzelList);
 
-		List<Catzel> catzels = Arrays.asList(PIKA, JACK, BINGO, SARIC);
-		System.out.println(catzels);
-		Collections.sort(catzels);
-		System.out.println(catzels);
+		System.out.println("=====================");
 
+		catzelList.forEach(System.out::println);
 
 
 	}
@@ -56,25 +61,45 @@ public class Catzel implements Comparable<Catzel> {
 
 		return this.nume.compareTo(catzel.nume);
 	}
+/**
+ * 		CJack parametru
+ *
+ * 		1 this.Pica compareTo CJack rezult 13
+ *
+ * 		Pika parametru
+ *
+ * 		2 this.ASarictrrre compareTo Pika rezult -15
+ *
+ * 		CJack parametru
+ *
+ * 		3 this.ASarictrrre compareTo CJack rezult -2
+ *
+ * 		CJack parametru
+ *
+ * 		4 this.BINGO compareTo CJack rezult -1
+ *
+ * 		ASarictrrre parametru
+ *
+ * 		5 this.BINGO compareTo ASarictrrre rezult 1
+ * */
 
-
-	@Override
-	public boolean equals(Object obj) {
-
-		if (obj == null) {
-			return false;
-		}
-		if (!(obj instanceof Object)) {
-			return false;
-		}
-		if (obj instanceof Catzel) {
-
-			Catzel catzel = (Catzel) obj;
-
-			return this.nume.equals(catzel.nume);
-		}
-		return false;
-	}
+//	@Override
+//	public boolean equals(Object obj) {
+//
+//		if (obj == null) {
+//			return false;
+//		}
+//		if (!(obj instanceof Object)) {
+//			return false;
+//		}
+//		if (obj instanceof Catzel) {
+//
+//			Catzel catzel = (Catzel) obj;
+//
+//			return this.nume.equals(catzel.nume);
+//		}
+//		return false;
+//	}
 
 	@Override
 	public int hashCode() {
