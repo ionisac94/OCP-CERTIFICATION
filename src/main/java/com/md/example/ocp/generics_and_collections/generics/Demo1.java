@@ -16,7 +16,7 @@ public class Demo1 {
 //		System.out.println(list.get(0));
 //		System.out.println(list);
 
-		List<? extends String> arrayList = new ArrayList<>();
+		ArrayList<String> arrayList = new ArrayList<>();
 //		arrayList.add("asdA");
 //		arrayList.add("asdA");
 //		arrayList.add("asdA");
@@ -26,7 +26,7 @@ public class Demo1 {
 		System.out.println(list);
 	}
 
-	private static List<String> acceptAll(List<? extends String> stringList) {
+	private static List<String> acceptAll(List<String> stringList) {
 
 
 		ArrayList<String> collect = stringList
